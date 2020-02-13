@@ -1,0 +1,32 @@
+@title = "Email Servers"
+
+Diese Seite ist eine technische Information für Administratoren, die Mailserver betreiben, die mit riseup kommunizieren.
+
+h2. Mail an riseup senden
+
+Wir mussten viele Ebenen der Spam-Blockierung implementieren. Wenn Sie der Administrator eines Mail-Servers sind, der versucht, Nachrichten an riseup-Benutzer weiterzuleiten, hier einige Hinweise, die Ihnen helfen, die Zustellung Ihrer Mail zu gewährleisten.
+
+h3. Unbedingt erforderlich
+
+* Ihr sendender Mail-Server muss über einen korrekten Reverse-DNS-Eintrag verfügen.
+* Die "Helo"-Zeichenfolge, die Ihr Server präsentiert, muss voll qualifiziert, gültig und nicht verschleiert sein.
+* Ihr Mail-Server muss dem SMTP-Protokoll folgen, wie es in den RFCs definiert ist.
+* Ihre Server-IP darf nicht in einer der Haupt-RBLs aufgeführt sein.
+* Sie sollten sich nicht über Tor verbinden (hauptsächlich wegen der RBL-Anforderung, wenn Sie über Tor transportieren wollen, sprechen Sie mit uns)
+* Absender- und Empfängeradressen müssen vollständig qualifizierte Domänennamen haben, die im DNS korrekt aufgelöst werden.
+* Nachrichten dürfen nicht größer als 25mb sein
+
+h3. Gute Idee zur Sicherstellung der Lieferung
+
+* Der Transport sollte [[TLS verschlüsselt=>https://en.wikipedia.org/wiki/Transport_Layer_Security]] sein und ein gültiges Zertifikat verwenden.
+* die sendende Domäne hat richtige [[SPF=>https://en.wikipedia.org/wiki/Sender_Policy_Framework]] Datensätze
+* Die sendende Domäne hat korrekte [[DKIM=>https://en.wikipedia.org/wiki/DomainKeys_Identified_Mail]] Datensätze und der Server signiert die DKIM-Nachricht.
+* die sendende Domäne hat den richtigen [[DMARC=>https://en.wikipedia.org/wiki/DMARC]]-Eintrag
+
+h2. Weiterleitung von E-Mails über riseup
+
+Wenn Sie ein riseup-Benutzer sind, der einen E-Mail-Server betreibt, ist es möglich, E-Mails über riseup weiterzuleiten. Konfigurieren Sie Ihren Server einfach so, dass er authentifiziertes SMTP an mail.riseup.net ausführt (wie jeder andere Mail-Client). Sie können jedoch nur E-Mails für Absenderadressen senden, die Sie [[registered=>email/settings/aliases#how-do-i-create-an-alias]] als Alias haben, und sie unterliegen auch Dingen wie SPF-Einträgen. Stellen Sie auch sicher, dass E-Mails an blanke Benutzernamen irgendwo hingelenkt werden, sonst erhält root@riseup.net Ihre Root-E-Mail, usw.
+
+h2. E-Mail-Empfang von Web-Servern/etc
+
+Wenn Sie Webserver (wordpress, drupal, etc.) oder andere Dinge verwalten, die so konfiguriert sind, dass sie SMTP verwenden, um Ihnen Benachrichtigungen/Alarm/etc. zu senden, haben wir keine Möglichkeit, sie von anderen Servern im Internet zu unterscheiden, und sie müssen die oben genannten Richtlinien befolgen. Besser wäre es, sie so zu konfigurieren, dass sie authentifiziertes SMTP verwenden, das viele der DNS/Helo/RBL-Einschränkungen umgeht (siehe jedoch den Abschnitt "Weiterleitung" oben).

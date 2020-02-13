@@ -1,0 +1,16 @@
+@title = 'Listen erzeugen'
+@summary = 'Informationen zur Erstellung von Listen.'
+
+h2.  Wie kann ich eine Liste erstellen?
+
+Sie müssen zuerst [[ein Listenkonto erstellen->https://lists.riseup.net/www/firstpasswd/]] und sich dann bei https://lists.riseup.net anmelden, bevor Sie eine Liste erstellen können. Nachdem Sie sich angemeldet haben, klicken Sie auf den Link [[Liste erstellen -> https://lists.riseup.net/www/create_list_request]]] oben auf der Seite. Es ist wichtig, daran zu denken, dass die riseup.net E-Mail-Konten völlig getrennt von den Listenkonten von riseup.net sind. Wenn Sie sich bei lists.riseup.net einloggen, geben Sie Ihre vollständige E-Mail-Adresse eines beliebigen Mail-Providers an. Sie benötigen kein riseup.net E-Mail-Konto, um eine Liste zu erstellen.
+
+h2.  Wer kann eine Liste erstellen?
+
+Jeder kann eine Liste erstellen! Die einzige Voraussetzung ist, dass die Liste für einen radikalen sozialen Wandel genutzt werden muss. Wenn Ihre Liste nicht progressiver, radikaler oder revolutionärer Natur ist, werden wir sie nicht ermöglichen. Listen, die in erster Linie für Hobbys, allgemeine Bildung, Sport oder spirituelle Praktiken bestimmt sind, werden *nicht* genehmigt. Auch hier muss die Liste politisch sein.
+
+Wenn Sie eine Liste erstellen, übernehmen Sie die Verantwortung für deren Pflege. Wenn Ihre Liste offen ist, werden Sie vielleicht schnell feststellen, dass Sie sie moderieren müssen, um Spam (sowohl von Unternehmen als auch von Aktivisten) zu verhindern. Siehe [[hier->https://we.riseup.net/riseuphelp/usage-agreement]] für die Nutzungsvereinbarung für Mailinglisten.
+
+h2.  Warum funktioniert meine Liste noch nicht?
+
+Sie können Ihre Listeneinstellungen bearbeiten, aber Sie können erst dann tatsächlich an die Listenadresse senden, wenn die Liste genehmigt ist. Sie erhalten eine E-Mail, wenn Ihre Liste genehmigt ist. Wenn wir die Aufnahme Ihrer Liste ablehnen, erhalten Sie ebenfalls eine Benachrichtigung. Es kann bis zu einer Woche (oder länger) dauern, bis wir Ihre Liste genehmigt haben.
