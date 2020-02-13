@@ -1,0 +1,1 @@
+git remote add mine ssh://git@github.com/horald/riseup_help
